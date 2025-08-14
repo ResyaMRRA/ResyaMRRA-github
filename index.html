@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ResyaMRRA</title>
+<style>
+body {
+    height: 100vh;
+    margin: 0;
+    background: radial-gradient(circle at center, #2c003e, #000000, #1a1a1a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Kartu Utama */
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover efek kartu */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Hover efek foto profil */
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+.name {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.desc {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+/* Tombol link dengan gradient */
+.link-button {
+    background: linear-gradient(90deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    padding: 12px 20px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    text-decoration: none;
+    width: 250px;
+    transition: all 0.4s ease;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efek hover gradient */
+.link-button::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(60deg, #ff6ec4, #7873f5, #42e695);
+    transition: all 0.5s ease;
+    z-index: 0;
+    filter: blur(40px);
+    opacity: 0;
+    transform: rotate(30deg);
+}
+
+.link-button:hover::before {
+    opacity: 1;
+}
+
+.link-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.25);
+}
+
+/* Teks dan ikon tetap di atas gradient */
+.link-button svg,
+.link-button span {
+    position: relative;
+    z-index: 1;
+}
+
+.link-button svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+</style>
+</head>
+<body>
+    
+<div class="card">
+    <img src="FOTOPROFIL.jpg" alt="Foto Profil" class="profile-pic">
+    <div class="name">ResyaMRRA</div>
+    <div class="desc">Hai, saya Resya – Muhammad Resya Raja Aditya.</div>
+
+
+    <a href="https://www.youtube.com/@resyamrra" class="link-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 15V9L15 12L10 15ZM21.8 8.001C21.6 7.1 20.9 6.4 20 6.2C18.4 6 12 6 12 6C12 6 5.6 6 4 6.2C3.1 6.4 2.4 7.1 2.2 8.001C2 9.6 2 12 2 12C2 12 2 14.4 2.2 15.999C2.4 16.9 3.1 17.6 4 17.8C5.6 18 12 18 12 18C12 18 18.4 18 20 17.8C20.9 17.6 21.6 16.9 21.8 15.999C22 14.4 22 12 22 12C22 12 22 9.6 21.8 8.001Z"/></svg>
+        <span>YouTube</span>
+    </a>
+
+    <a href="https://www.tiktok.com/@resya.mrra" class="link-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.5 3C16.5 4.9 18.1 6.5 20 6.5V9C18.2 9 16.6 8.3 15.5 7.1V14.5C15.5 17 13.5 19 11 19C8.5 19 6.5 17 6.5 14.5C6.5 12 8.5 10 11 10C11.3 10 11.6 10 11.9 10.1V12.1C11.6 12 11.3 12 11 12C9.6 12 8.5 13.1 8.5 14.5C8.5 15.9 9.6 17 11 17C12.4 17 13.5 15.9 13.5 14.5V3H16.5Z"/></svg>
+        <span>TikTok</span>
+    </a>
+
+    <a href="https://www.instagram.com/resya.mrra/" class="link-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2C4.2 2 2 4.2 2 7V17C2 19.8 4.2 22 7 22H17C19.8 22 22 19.8 22 17V7C22 4.2 19.8 2 17 2H7ZM20 17C20 18.7 18.7 20 17 20H7C5.3 20 4 18.7 4 17V7C4 5.3 5.3 4 7 4H17C18.7 4 20 5.3 20 7V17ZM12 7C9.2 7 7 9.2 7 12C7 14.8 9.2 17 12 17C14.8 17 17 14.8 17 12C17 9.2 14.8 7 12 7ZM12 15C10.3 15 9 13.7 9 12C9 10.3 10.3 9 12 9C13.7 9 15 10.3 15 12C15 13.7 13.7 15 12 15ZM17.5 6C17.2 6 17 6.2 17 6.5C17 6.8 17.2 7 17.5 7C17.8 7 18 6.8 18 6.5C18 6.2 17.8 6 17.5 6Z"/></svg>
+        <span>Instagram</span>
+    </a>
+
+    <a href="mailto:resya888@gmail.com" class="link-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"/></svg>
+        <span>Email</span>
+    </a>
+
+    <a href="https://www.facebook.com/resya.mrra" class="link-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12C22 6.48 17.52 2 12 2S2 6.48 2 12C2 17 5.66 21.13 10.44 21.88V14.89H7.9V12H10.44V9.8C10.44 7.3 11.93 5.94 14.18 5.94C15.26 5.94 16.38 6.12 16.38 6.12V8.58H15.06C13.76 8.58 13.56 9.28 13.56 10.01V12H16.26L15.84 14.89H13.56V21.88C18.34 21.13 22 17 22 12Z"/></svg>
+        <span>Facebook</span>
+    </a>
+</div>
+
+</body>
+</html>
